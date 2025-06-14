@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MITS - Micro Information Technology Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+        .hover-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .university-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .university-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .university-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        .hero-image {
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-microchip text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-white">MITS</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-purple-300 transition-colors">Home</a>
+                    <a href="#about" class="text-white hover:text-purple-300 transition-colors">About</a>
+                    <a href="#universities" class="text-white hover:text-purple-300 transition-colors">Universities</a>
+                    <a href="#contact" class="text-white hover:text-purple-300 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-white rounded-full floating-animation"></div>
+            <div class="absolute top-40 right-32 w-20 h-20 bg-white rounded-full floating-animation" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-32 left-1/4 w-16 h-16 bg-white rounded-full floating-animation" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 text-shadow">
+                        Micro Information<br>
+                        <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                            Technology Services
+                        </span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white mb-8 text-shadow">
+                        Empowering students with cutting-edge technology solutions and fostering innovation across universities worldwide
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-100 transition-all transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-rocket mr-2"></i>Get Started
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-700 transition-all transform hover:scale-105">
+                            <i class="fas fa-play mr-2"></i>Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Students collaborating with technology" 
+                         class="hero-image mx-auto floating-animation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">Our Mission</h2>
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="hover-glow bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl">
+                        <div class="text-4xl text-blue-600 mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Innovation</h3>
+                        <p class="text-gray-600">Driving technological innovation through student-centered solutions and cutting-edge research initiatives.</p>
+                    </div>
+                    <div class="hover-glow bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl">
+                        <div class="text-4xl text-green-600 mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Collaboration</h3>
+                        <p class="text-gray-600">Building bridges between universities to create a global network of tech-savvy students and professionals.</p>
+                    </div>
+                    <div class="hover-glow bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-2xl">
+                        <div class="text-4xl text-purple-600 mb-4">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Education</h3>
+                        <p class="text-gray-600">Providing accessible technology education and resources to empower the next generation of innovators.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Section -->
+    <section id="universities" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our University Partners</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Collaborating with leading institutions worldwide to deliver exceptional technology services and educational opportunities
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">Massachusetts Institute of Technology</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Seal_of_Leland_Stanford_Junior_University.svg" alt="Stanford University Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">Stanford University</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Harvard_University_coat_of_arms.svg" alt="Harvard University Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">Harvard University</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Seal_of_University_of_California%2C_Berkeley.svg" alt="UC Berkeley Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">UC Berkeley</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Carnegie_Mellon_University_seal.svg" alt="Carnegie Mellon University Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">Carnegie Mellon</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Seal_of_the_California_Institute_of_Technology.svg" alt="Caltech Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">California Institute of Technology</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Oxford-University-Coat-Of-Arms.svg" alt="Oxford University Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">University of Oxford</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Coat_of_Arms_of_the_University_of_Cambridge.svg" alt="Cambridge University Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">University of Cambridge</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/ETH_Zurich_Logo_black.svg" alt="ETH Zurich Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">ETH Zurich</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="university-logo mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/NUS_coat_of_arms.svg" alt="National University of Singapore Logo">
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-center">National University of Singapore</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Stats -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Global Reach</h2>
+                <p class="text-xl text-gray-600">Connecting with students and professionals worldwide</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="text-center hover-glow bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="stats-counter">125K</div>
+                    <p class="text-gray-600 font-semibold">Twitter Followers</p>
+                </div>
+                <div class="text-center hover-glow bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-2xl">
+                    <div class="text-4xl text-pink-600 mb-4">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="stats-counter">89K</div>
+                    <p class="text-gray-600 font-semibold">Instagram Followers</p>
+                </div>
+                <div class="text-center hover-glow bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
+                    <div class="text-4xl text-blue-700 mb-4">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="stats-counter">67K</div>
+                    <p class="text-gray-600 font-semibold">LinkedIn Connections</p>
+                </div>
+                <div class="text-center hover-glow bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl">
+                    <div class="text-4xl text-purple-600 mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stats-counter">250K</div>
+                    <p class="text-gray-600 font-semibold">Total Network</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="hover-glow bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Students engaged in learning" 
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <h3 class="text-2xl font-bold text-gray-800">Student Engagement</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Active Students</span>
+                            <span class="font-bold text-purple-600">45,000+</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Projects Completed</span>
+                            <span class="font-bold text-purple-600">12,500+</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Workshops Conducted</span>
+                            <span class="font-bold text-purple-600">850+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hover-glow bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Global network representation" 
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <h3 class="text-2xl font-bold text-gray-800">Global Impact</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Countries Reached</span>
+                            <span class="font-bold text-purple-600">35+</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Partner Universities</span>
+                            <span class="font-bold text-purple-600">150+</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Tech Solutions Deployed</span>
+                            <span class="font-bold text-purple-600">500+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 text-shadow">Ready to Join Our Network?</h2>
+                    <p class="text-xl text-white mb-8 text-shadow">
+                        Connect with thousands of students, access cutting-edge resources, and be part of the future of technology education.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-100 transition-all transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-user-plus mr-2"></i>Join Now
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-700 transition-all transform hover:scale-105">
+                            <i class="fas fa-envelope mr-2"></i>Contact Us
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Team collaboration and innovation" 
+                         class="hero-image mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-microchip text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">MITS</span>
+                    </div>
+                    <p class="text-gray-400">Empowering students with technology solutions worldwide.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Universities</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Micro Information Technology Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.backgroundColor = 'rgba(102, 126, 234, 0.9)';
+            } else {
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+
+        // Animate counters when they come into view
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+                    animateCounter(counter, target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stats-counter').forEach(counter => {
+            observer.observe(counter);
+        });
+
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = formatNumber(target);
+                    clearInterval(timer);
+                } else {
+                    element.textContent = formatNumber(Math.floor(current));
+                }
+            }, 20);
+        }
+
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(0) + 'K';
+            }
+            return num.toString();
+        }
+    </script>
+</body>
+</html>
